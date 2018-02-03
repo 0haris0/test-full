@@ -2,4 +2,4 @@ This project is for listing heroes on frontpage. Also there is feature that when
 
 Project is worked in AngularJS. Into files there is comments about functions. If you have any questions, please don't hesitate to contact me on haris.valj@gmail.com
 
-Have a nice day!
+Have a nice day! 
