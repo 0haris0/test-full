@@ -1,0 +1,21 @@
+<div class="left">
+  <h2>Heroes</h2>
+  <ul class="heroes">
+    <!--List heroes -->
+    <li *ngFor="let hero of heroes "
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+      <span class="Ids">{{hero.id}}</span> {{hero.attributes.name}}
+    </li>
+    <!--End of listing heroes-->
+  </ul>
+</div>
+<!-- If click on hero -->
+<div *ngIf="selectedHero">
+  <div class="right">
+    <img src="{{selectedHero.attributes.image_splash}}"> <!--Display image splash -->
+      <img src="{{selectedHero.attributes.image_portrait}}" class="image_portrait"> <!--Display small portrait-->
+      <h2>{{ selectedHero.attributes.name | uppercase }}</h2> <!--Display name of hero with filter Uppercase-->
+      <p><small>Last update: {{selectedHero.attributes.updated_at | date: "d.M. y"}}</small></p> <!--Display last time hero get update with date filter "d.M.y"-->
+  </div>
+</div>
